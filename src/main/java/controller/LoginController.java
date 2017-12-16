@@ -4,8 +4,11 @@ import java.io.Serializable;
 import java.util.logging.Logger;
 
 import javax.annotation.PostConstruct;
+import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
+
+import ejbs.CommonService;
 
 @SessionScoped
 @Named("loginController")
@@ -14,8 +17,8 @@ public class LoginController implements Serializable {
 	private static final Logger LOGGER = Logger.getLogger(LoginController.class.toString());
 	private String value;
 
-//	@EJB
-//	CommonService commonService;
+	@EJB
+	CommonService commonService;
 
 	@PostConstruct
 	public void initialize() {
@@ -26,8 +29,8 @@ public class LoginController implements Serializable {
 	public String clickAction() {
 		LOGGER.info("LoginController.clickAction");
 		try {
-//			String value = commonService.getData(getValue());
-//			setValue(value);
+			String value = commonService.getData(getValue());
+			setValue(value);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -16,7 +16,7 @@ public class CommonService implements Serializable {
 
 	public String getData(String input) throws Exception {
 		LOGGER.warning("CommonService.getData called");
-		return input + ":service";
+		return "A";
 	}
 
 }
