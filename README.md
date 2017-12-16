@@ -1,0 +1,1 @@
+The project is related to configuring Arquillian with JEE6 project for container based testing.
