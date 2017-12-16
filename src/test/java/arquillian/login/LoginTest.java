@@ -7,7 +7,6 @@ import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -19,7 +18,6 @@ public class LoginTest {
 	public static JavaArchive createDeployment() {
 		JavaArchive jar = ShrinkWrap.create(JavaArchive.class).addClass(LoginController.class)
 				.addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
-		System.out.println(jar.toString(true));
 		return jar;
 	}
 
@@ -29,6 +27,6 @@ public class LoginTest {
 	@Test
 	public void should_create_greeting() {
 		// Assert.fail("Not yet implemented");
-		System.out.println(loginController.getValue());
+		System.out.println(loginController.clickAction());
 	}
 }
