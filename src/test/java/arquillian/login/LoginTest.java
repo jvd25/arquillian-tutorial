@@ -13,13 +13,15 @@ import org.junit.runner.RunWith;
 
 import controller.LoginController;
 import ejbs.CommonService;
+import entity.Employee;
 
 @RunWith(Arquillian.class)
 public class LoginTest {
 	@Deployment
 	public static JavaArchive createDeployment() {
 		JavaArchive jar = ShrinkWrap.create(JavaArchive.class).addClasses(LoginController.class, CommonService.class)
-				.addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+				.addPackage(Employee.class.getPackage()).addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml")
+				.addAsResource("META-INF/persistence.xml");
 		return jar;
 	}
 
@@ -29,6 +31,6 @@ public class LoginTest {
 	@Test
 	public void checkExpectedValue() throws Exception {
 		String str = commonService.getData(null);
-		Assert.assertTrue("A".equals(str));
+		Assert.assertTrue("shivam".equals(str));
 	}
 }
