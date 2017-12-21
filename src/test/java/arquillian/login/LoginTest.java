@@ -31,6 +31,6 @@ public class LoginTest {
 	@Test
 	public void checkExpectedValue() throws Exception {
 		String str = commonService.getData(null);
-		Assert.assertTrue("shivam".equals(str));
+		Assert.assertTrue("Expected value shivam but generated value is " + str, "shivam".equals(str));
 	}
 }

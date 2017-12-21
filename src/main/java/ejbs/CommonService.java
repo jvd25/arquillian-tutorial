@@ -20,6 +20,7 @@ public class CommonService implements Serializable {
 		LOGGER.warning("CommonService.getData called");
 		Employee employee = em.find(Employee.class, 1l);
 		LOGGER.warning("CommonService.getData : " + employee.getEmployeeName());
+		Thread.sleep(1000);
 		return employee.getEmployeeName();
 	}
 
