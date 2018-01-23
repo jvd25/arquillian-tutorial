@@ -1,0 +1,52 @@
+Test driven development:
+# Test-driven development (TDD) is an evolutionary approach to development which combines test-first development where you write a test before you write just enough production code to fulfill that test and refactoring.   
+# The goal of TDD is to write clean code that works.(with proper stats) 
+
+
+Continuous Integration:
+# is the process of automating the build (Jenkin)
+# and testing of code every time a team member commits changes to version control. (mvn and arquillian)
+
+
+Continuous Deployment
+# Continuous deployment aims to reduce the time elapsed between writing a line of code 
+# and making that code available to users in production.
+
+
+Arquillian advantage:
+# ability to create "micro deployments" around your test.
+# can be integrated with browser .
+# can debug your micro developed code on same container. 
+# Arquillian provides an extensible platform into which you can integrate that next great testing tool. like selenium etc
+
+
+## 
+And this is where Arquillian (and Arquillian Cube) helps you on automating everything.(choose specific env at run time.)
+Arquillian Cube is an Arquillian extension that can be used to manager Docker containers from Arquillian.
+
+
+
+## No more mocks. No more container lifecycle and deployment hassles. Just real tests!
+
+
+JEE components:
+JSF, EJB, JPA and Hibernate, MDriven beans , rest apis, CDI
+spring beans, 
+docker supports, 
+
+
+- Jenkin with take checkout of source code (+ runtime), 
+- mvn with create build, 
+- arquillian will going to up docker container(+ runtime) where you container will be present,
+- and test will result will be prepared
+- maintains logs (tools are present)
+
+- micro development and debugging on the basis of some standards.
+
+
+Containers supported,
+jboss7/EAP 6/7
+Wildfly
+Tomcat
+kubernetes
+
